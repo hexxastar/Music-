@@ -1,46 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>My Playlist</title>
-<style>
-body{margin:0;background:#111;color:#eee;font-family:Arial,sans-serif}
-.container{max-width:800px;margin:auto;padding:24px}
-h1{text-align:center}
-p{text-align:center;color:#bbb}
-input{width:100%;padding:12px;border-radius:8px;border:none;background:#222;color:#fff}
-.song{display:flex;gap:16px;align-items:center;background:#1b1b1b;padding:12px;border-radius:12px;margin:16px 0}
-.cover{width:70px;height:70px;background:#333;border-radius:8px;object-fit:cover}
-.info{flex:1}
-a.button,button{background:#fff;color:#111;border:none;padding:8px 12px;border-radius:8px;text-decoration:none;margin-right:8px;cursor:pointer}
-audio{width:100%;margin-top:8px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helia, in her songs.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="container">
-<h1>🎵 My Playlist</h1>
-<p><b>Find my soul in my favorite songs</b><br>Hope u like it!</p>
-<input id="search" placeholder="Search songs...">
-<div id="songs"></div>
+
+<div class="background"></div>
+
+<header class="hero">
+
+<h1>Helia, in her songs.</h1>
+
+<p class="quote">
+Every song here holds a piece of me.
+</p>
+
+<p class="subtitle">
+Find my soul in my favorite songs.<br>
+Hope u like it!
+</p>
+
+<div class="search-box">
+<input
+type="text"
+id="searchInput"
+placeholder="Search songs...">
 </div>
-<script>
-const songs=[
-{title:"Sample Song",artist:"Sample Artist",cover:"covers/sample.jpg",audio:"music/sample.mp3"}
-];
-function render(){
- const q=document.getElementById('search').value.toLowerCase();
- const wrap=document.getElementById('songs');wrap.innerHTML='';
- songs.filter(s=>s.title.toLowerCase().includes(q)||s.artist.toLowerCase().includes(q)).forEach(s=>{
- wrap.innerHTML+=`<div class="song">
-<img class="cover" src="${s.cover}">
-<div class="info"><b>${s.title}</b><br>${s.artist}
-<audio controls src="${s.audio}"></audio></div>
-<a class="button" href="${s.audio}" download>Download</a>
-</div>`;
- });
-}
-document.getElementById('search').oninput=render;
-render();
-</script>
-</body></html>
+
+</header>
+
+<main>
+
+<section
+id="songsContainer"
+class="songs">
+
+<!-- Songs will appear here -->
+
+</section>
+
+</main>
+
+<div
+id="miniPlayer"
+class="mini-player hidden">
+
+<img
+id="cover"
+src=""
+alt="cover">
+
+<div class="player-info">
+
+<h3 id="songTitle">
+Nothing Playing
+</h3>
+
+<p id="artistName">
+Select a song
+</p>
+
+</div>
+
+<audio
+id="audioPlayer"
+controls>
+</audio>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
