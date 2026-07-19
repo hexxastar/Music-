@@ -18,7 +18,7 @@ audio:"https://cdn.imageurlgenerator.com/uploads/a98403c2-cc4d-44b0-9abe-7fe6177
 title:"24/7",
 artist:"Arta",
 cover:"",
-link:""
+audio:"https://cdn.imageurlgenerator.com/uploads/f9876a91-057b-4917-9382-b9b11cd9cae7.mp3"
 },
 
 {
