@@ -391,7 +391,7 @@ function createSongCard(song){
 return `
 <div class="song-card">
 
-<img class="cover" src="${song.cover || "https://placehold.co/300x300/111/ffffff?text=%E2%99%AA"}">
+<img class="song-cover" src="${song.cover || "https://placehold.co/300x300/111/ffffff?text=%E2%99%AA"}">
 
 <div class="song-info">
 
