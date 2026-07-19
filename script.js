@@ -454,6 +454,16 @@ songsContainer.innerHTML+=createSongCard(song);
 renderSongs(songs);
 
 searchInput.addEventListener("input",()=>{
+
+const value=searchInput.value.toLowerCase();
+
+const filtered=songs.filter(song=>
+
+song.title.toLowerCase().includes(value) ||
+
+song.artist.toLowerCase().includes(value)
+
+);
   function playSong(audio, cover, title, artist){
 
     if(!audio){
@@ -476,16 +486,7 @@ searchInput.addEventListener("input",()=>{
     audioPlayer.play();
 
   }
-
-const value=searchInput.value.toLowerCase();
-
-const filtered=songs.filter(song=>
-
-song.title.toLowerCase().includes(value) ||
-
-song.artist.toLowerCase().includes(value)
-
-);
+  
 
 renderSongs(filtered);
 
