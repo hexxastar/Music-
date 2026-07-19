@@ -3,7 +3,7 @@ const songs = [
 {
 title:"The Fate of Ophelia",
 artist:"Taylor Swift",
-cover:"https://drive.google.com/uc?export=view&id=1jQHzwoxpj20PBQCGoHGyWlnsDhoIM92k",
+cover:"https://i.ibb.co/qYdTYHy8/op2ybwfjhnv71.jpg",
 link:""
 },
 
