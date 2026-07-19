@@ -437,3 +437,4 @@ song.artist.toLowerCase().includes(value)
 renderSongs(filtered);
 
 });
+alert("script loaded");
